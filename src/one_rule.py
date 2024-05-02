@@ -96,13 +96,11 @@ def main():
     learning_sample = util.get_samples("AppleQualityDataset_Learning.xlsx")
     test_sample = util.get_samples("AppleQualityDataset_Test.xlsx")
 
-    round_to = 1
+    round_to = 0
     segregated_learning_sample = util.segregate_floats(learning_sample, round_to)
     segregated_test_sample = util.segregate_floats(test_sample, round_to)
 
     one_rule = OneRule(segregated_learning_sample)
-
-    """
     
     total_count = 0
     success_count = 0
@@ -114,8 +112,8 @@ def main():
         if expected_result == prediction:
             success_count += 1
 
-    print(f"Success rate: {int((success_count / total_count) * 100)}%")
-    """
+    print(f"Success prediction rate: {int((success_count / total_count) * 100)}%")
+
 
 if __name__ == '__main__':
     main()

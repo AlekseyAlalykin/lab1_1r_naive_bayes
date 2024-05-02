@@ -139,7 +139,7 @@ def main():
         if expected_result == prediction[0]:
             success_count += 1
 
-    print(f"Success rate: {int((success_count / total_count) * 100)}%")
+    print(f"Success prediction rate: {int((success_count / total_count) * 100)}%")
 
 
 if __name__ == '__main__':
