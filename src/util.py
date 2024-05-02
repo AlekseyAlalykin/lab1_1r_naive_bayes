@@ -34,7 +34,7 @@ def get_samples(filepath):
     return data.values.tolist()
 
 
-# Разделение вещественных чисел на count групп
+# Разделение вещественных чисел на группы округляя их до round_to знаков после запятой
 def segregate_floats(table, round_to):
     min_max = []
     table_copy = copy.deepcopy(table)

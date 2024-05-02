@@ -96,6 +96,7 @@ def main():
     learning_sample = util.get_samples("AppleQualityDataset_Learning.xlsx")
     test_sample = util.get_samples("AppleQualityDataset_Test.xlsx")
 
+    # Округлять до round_to цифр после запятой для деления на группы
     round_to = 0
     segregated_learning_sample = util.segregate_floats(learning_sample, round_to)
     segregated_test_sample = util.segregate_floats(test_sample, round_to)
